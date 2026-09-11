@@ -1,0 +1,108 @@
+/*
+1 creazione del testo e formattazione di 1 parola da far ruotare
+2 inserimento delle altre 2 parole
+3 sovrapporre le 3 parole
+4 mostrare 1 parola e nascondere le altre 2
+5 animare 1 parola (fadein - fadeout con spostamento)
+6 animare le altre 2 parole
+7 ritardare progressivamente l'animazione delle altre 2 parole 
+*/
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.3;
+    font-weight: 600;
+    color: rgb(131, 131, 131);
+    border: 2px solid grey;
+    margin: 50px;
+    width:600px;
+    padding: 20px;
+}
+
+i {
+    color: #7ca3bd;
+    display: inline-block;
+}
+
+.parole {
+  display: inline-block; /* necessario per usare transform su testo */
+  animation: rotazione 2s linear infinite;
+}
+
+@keyframes rotazione {
+  0% {
+    transform: rotateX(0deg);
+  }
+
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+@keyframes rotate1 {
+    0% {
+        opacity: 0; transform: translateY(-10px) rotateX(90deg); 
+    }
+    3% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    17% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0; transform: translateY(10px) rotateX(-90deg);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes rotate2 {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0; transform: translateY(-10px) rotateX(90deg);
+    }
+    33% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    47% {
+        opacity:0;
+    }
+    50% {
+        opacity: 0; transform: translateY(10px) rotateX(-90deg);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes rotate3 {
+    0% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 0; transform: translateY(-10px) rotateX(90deg);
+    }
+    73% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+    87% {
+        opacity: 0;
+    }
+    90% { 
+    opacity: 0; transform: translateY(10px) rotateX(-90deg);
+}
+    100% {
+        opacity: 0;
+    }
+}
